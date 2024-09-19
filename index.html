@@ -8,11 +8,12 @@
 <body>
 
     <form id="sample-form" novalidate>
-        <!-- Date Input Validation -->
-        <label for="birthdate">Birthdate (MM/DD/YYYY):</label>
-        <small>Format: MM/DD/YYYY. Must be at least 18 years old.</small>
-        <input type="text" id="birthdate" name="birthdate" placeholder="MM/DD/YYYY" required>
+       <!-- Date Input Validation with Date Picker -->
+        <label for="birthdate">Birthdate:</label>
+        <small>You must be at least 18 years old.</small>
+        <input type="date" id="birthdate" name="birthdate" required>
         <span id="birthdate-error" class="error-message"></span>
+
 
         <!-- Credit Card Number Validation -->
         <label for="credit-card">Credit Card Number:</label>
