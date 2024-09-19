@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Validation Sample App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <form id="sample-form" novalidate>
+        <!-- Date Input Validation -->
+        <label for="birthdate">Birthdate (MM/DD/YYYY):</label>
+        <small>Format: MM/DD/YYYY. Must be at least 18 years old.</small>
+        <input type="text" id="birthdate" name="birthdate" placeholder="MM/DD/YYYY" required>
+        <span id="birthdate-error" class="error-message"></span>
+
+        <!-- Credit Card Number Validation -->
+        <label for="credit-card">Credit Card Number:</label>
+        <small>Enter a 16-digit credit card number.</small>
+        <input type="text" id="credit-card" name="credit-card" placeholder="**** **** **** 1234" required>
+        <span id="cc-error" class="error-message"></span>
+
+        <!-- Postal/ZIP Code Validation (US-specific) -->
+        <label for="zip-code">ZIP Code:</label>
+        <small>5-digit ZIP code or ZIP+4 format.</small>
+        <input type="text" id="zip-code" name="zip-code" placeholder="12345 or 12345-6789" required>
+        <span id="zip-error" class="error-message"></span>
+
+        <!-- Username Validation -->
+        <label for="username">Username:</label>
+        <small>3-15 characters; letters, numbers, and underscores only.</small>
+        <input type="text" id="username" name="username" placeholder="Your username" required>
+        <span id="username-error" class="error-message"></span>
+
+        <!-- URL/Website Input Validation -->
+        <label for="website">Website URL:</label>
+        <small>Must start with http:// or https://</small>
+        <input type="url" id="website" name="website" placeholder="https://example.com" required>
+        <span id="website-error" class="error-message"></span>
+
+        <!-- Numeric Range Validation -->
+        <label for="quantity">Quantity (1-100):</label>
+        <small>Select a quantity between 1 and 100.</small>
+        <input type="number" id="quantity" name="quantity" min="1" max="100" value="1" required>
+        <span id="quantity-error" class="error-message"></span>
+
+        <!-- Password Strength Validation -->
+        <label for="password">Password:</label>
+        <small>Minimum 8 characters, including uppercase, lowercase, number, and special character.</small>
+        <input type="password" id="password" name="password" required>
+        <div id="password-strength" class="strength-meter"></div>
+        <span id="password-error" class="error-message"></span>
+
+        <!-- Password Confirmation -->
+        <label for="confirm-password">Confirm Password:</label>
+        <small>Must match the password entered above.</small>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+        <span id="confirm-password-error" class="error-message"></span>
+
+        <!-- File Upload Validation -->
+        <label for="profile-picture">Upload Profile Picture:</label>
+        <small>Accepts .jpg, .jpeg, .png, or .gif files up to 2MB.</small>
+        <input type="file" id="profile-picture" name="profile-picture" accept=".jpg, .jpeg, .png, .gif" required>
+        <img id="preview-image" alt="Image Preview">
+        <span id="file-error" class="error-message"></span>
+
+        <!-- Checkbox Validation -->
+        <label class="terms-label">
+            <input type="checkbox" id="terms" name="terms" required>
+            I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>
+        </label>
+        <span id="terms-error" class="error-message"></span>
+
+        <!-- Phone Number Validation (US-specific) -->
+        <label for="phone-number">Phone Number:</label>
+        <small>Format: (123) 456-7890 or similar US formats.</small>
+        <input type="text" id="phone-number" name="phone-number" placeholder="(123) 456-7890" required>
+        <span id="phone-error" class="error-message"></span>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

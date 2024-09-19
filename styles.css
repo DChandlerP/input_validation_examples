@@ -1,0 +1,85 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="url"],
+input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+input.valid {
+    border: 2px solid green;
+}
+
+input.invalid {
+    border: 2px solid red;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+}
+
+.strength-meter {
+    height: 5px;
+    background-color: red;
+    width: 0%;
+    transition: width 0.5s;
+    margin-top: 5px;
+}
+
+.strength-weak {
+    background-color: red;
+}
+
+.strength-medium {
+    background-color: orange;
+}
+
+.strength-strong {
+    background-color: green;
+}
+
+/* Image Preview */
+#preview-image {
+    display: none;
+    max-width: 200px;
+    margin-top: 10px;
+}
+
+/* Submit Button */
+button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 1em;
+}
+
+/* Terms and Conditions Label */
+.terms-label {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.terms-label input[type="checkbox"] {
+    margin-right: 10px;
+}
